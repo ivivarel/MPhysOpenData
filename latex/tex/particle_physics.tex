@@ -17,25 +17,34 @@ Other groupings are possible: we will introduce them if and when they will be ne
 
 Particle are objects with a mass of the order of the proton one. There are large variations on this order of magnitude: the heaviest known elementary particle is the top quark, whose mass is about 172 times that of the proton. The electron is the lightest massive particle, with a mass of about half of a thousandth of a proton. Massless particles exist as well (the photon mass is zero, that of the neutrinos is very small although not zero).
 
+\begin{figure}[tb] 
+	\centering
+	\includegraphics[width=0.5\columnwidth]{Figures/Standard_Model_of_Elementary_Particles.png}
+	\label{tab:SM}
+	\caption{Particle content of the Standard Model of Particle Physics. For each particle, the mass, the charge and the spin are reported. Please bear in mind that the mass of light quarks ($u$, $d$, $s$) is not straightforward to define and estimate, given that no free quark can be observed. Taken from Ref.~\cite{SM_wikipedia}}
+\end{figure}
+
+
 \subsection{The Standard Model of Particle Physics} 
 
-The best theory of particle physics we have available is the so--called Standard Model of Particle Physics (SM in the following). It specifies the full list of particles, their properties and their interactions. Table~\ref{tab:SM} summarises the particle content of the SM. There are three leptonic families. In each leptonic family, there is a charged lepton and a neutrino of the same flavour. There are also three quark families. In each quark family there is a quark with charge $+\frac{2}{3}$ and one with charge $-\frac{1}{3}$. Each quark defines its own flavour. Not shown in the table: for each particle family there is an identical family composed by anti-particles. So, for the family composed by the electron and its neutrino, there is a family composed by a positively charged electron (the positron) and an antineutrino. 
+The best theory of particle physics we have available is the so--called Standard Model of Particle Physics (SM in the following). It specifies the full list of particles, their properties and their interactions. Table~\ref{tab:SM} summarises the particle content of the SM. There are three leptonic families (in green). In each leptonic family, there is a charged lepton and a neutrino of the same flavour. There are also three quark families (in purple). In each quark family there is a quark with charge $+\frac{2}{3}$ and one with charge $-\frac{1}{3}$. Each quark defines its own flavour. Not shown in the table: for each particle family there is an identical family composed by anti-particles. So, for the family composed by the electron and its neutrino, there is a family composed by a positively charged electron (the positron) and an antineutrino. 
 
-There are also bosons, that mediates the interactions between the particles in the leptonic and quark families. These are: 
+There are also bosons, that mediates the interactions between the particles in the leptonic and quark families (in red). These are: 
 \begin{itemize}
 \item The photon, that mediates the electromagnetic interaction between charged particles. 
 \item The $W^+, W^{-}$ and $Z$ bosons, which mediate the weak interaction between leptons and between quarks. 
 \item The gluons, that mediate the strong nuclear interaction between quarks. 
-\item The Higgs boson, that interacts with all particles with an intensity that is proportional to the particle mass. 
 \end{itemize} 
 
-We will use a helpful graphical tool to represent interactions between particles. These are the Feynman diagrams. Please bear in mind that we will use them only as a graphical tool, but they are actually a graphical representation of quantitative mathematical expressions that allow to precisely calculate how likely a given process is to occur. In this graphs, we will always represent incoming particles to the left and outgoing particles on the right. See Figure~\ref{fig:feyn_example} for few examples~\footnote{In this handbook, we will always deal with so-called \textit{leading-order} Feynman diagrams. If you want to know more about \textit{higher order} Feynman diagrams, please consult Ref.~\cite{shaw}. We will also neglect possible leading order Feynman diagram vertices that include more than three lines.}. 
+Finally, the Higgs boson is shown in yellow: it interacts with all particles with an intensity that is proportional to the particle mass. 
+
+We will use a helpful graphical tool to represent interactions between particles. These are the Feynman diagrams. Please bear in mind that we will use them only as a graphical tool, but they are actually a representation of quantitative mathematical expressions that allow to precisely calculate how likely a given process is to occur. In this graphs, we will always represent incoming particles to the left and outgoing particles on the right. 
 
 There are important rules that have to be respected when drawing possible Feynman diagrams:
 \begin{enumerate}
 \item Electric charge, momentum, energy and angular momentum are always conserved at a vertex.
 \item Fermions are represented with arrows. An incoming fermion is represented with an incoming arrow, while an outgoing fermion is represented with an outgoing arrow. For anti-fermions, rules are reversed: an incoming anti-fermion is represented with an outgoing arrow, while an outgoing anti-fermion is represented with an incoming arrow. See examples in Figure~\ref{fig:feyn_example}. 
-\item The total number of leptons has to be conserved. Each lepton contributes to the number of leptons with an additive $+1$, while each anti-lepton with an additive $-1$
+\item The total number of leptons has to be conserved. Each lepton contributes to the number of leptons with an additive $+1$, while each anti-lepton with an additive $-1$.
 \item Likewise, the total number of quarks has to be conserved. Each quark contributes with an additive $+\frac{1}{3}$, while each anti-quark with an additive $-\frac{1}{3}$
 \item As a consequence of rule 1 for angular momentum, a three-line vertex can only be: two fermions and a boson; three bosons.
 \item Gluons interact only with quarks and other gluons. 
@@ -44,7 +53,61 @@ There are important rules that have to be respected when drawing possible Feynma
 \item The $W$ boson interaction conserves the leptonic flavour. So $We\bar{\nu}_e$ is a legal vertex, but $We\bar{\nu}_{\mu}$ is not. 
 \end{enumerate}
 
-Figure~\ref{fig:allowed_feyn} shows examples of allowed Feynman diagrams, while Figure~\ref{fig:forbidden_feyn} shows some processes which are not allowed. 
+Figure~\ref{fig:feyn_example}~\footnote{In this handbook, we will always deal with so-called \textit{leading-order} Feynman diagrams. If you want to know more about \textit{higher order} Feynman diagrams, please consult Ref.~\cite{shaw}. We will also neglect possible leading order Feynman diagram vertices that include more than three lines.} shows examples of allowed Feynman diagrams, while Figure~\ref{fig:forbidden_feyn} shows some processes which are not allowed. 
+
+ \begin{figure}[!h]
+\begin{center}
+\subfigure[Production of a Z boson decaying into a $\mu\bar{\mu}$ pair at an electron-positron collider.]{
+\includegraphics[width=0.2\textwidth]{./Figures/ee_to_Zmumu.eps}
+}
+\hfill
+\subfigure[A diagram for $W$ production at a hadron collider, followed by the $W$ decay into two quarks.]{
+\includegraphics[width=0.2\textwidth]{./Figures/ud_to_Wcs.eps}
+}
+\hfill
+\subfigure[A diagram for $t\bar{t}$ production at a hadron collider.]{
+\includegraphics[width=0.2\textwidth]{./Figures/gg_to_ttbar.eps}
+}
+\hfill
+\subfigure[Higgs boson production via the so-called gluon fusion process, followed by $H\rightarrow\gamma\gamma$, at a hadron collider. Both the gluons and the photons are massless particles, the Higgs boson couples to them through intermediate particles.]{
+\includegraphics[width=0.2\textwidth]{./Figures/Higgs_gluonFusion.eps}
+}
+\end{center}
+\caption{Examples of valid Feynman diagrams. For each of them, the fermion lines do not stop within the diagram, rather they enter and exit the diagram fully. This is a consequence of angular momentum and charge conservation.}
+\label{fig:feyn_example}
+\end{figure}
+
+ \begin{figure}[!h]
+\begin{center}
+\subfigure[Violation of charge conservation at the $W$ production vertex.]{
+\includegraphics[width=0.2\textwidth]{./Figures/ee_to_Wmumu.eps}
+}
+\hfill
+\subfigure[Flavour violation at the $Z$ decay vertex. The $Z$ boson only couples to leptons and quarks of the same flavour.]{
+\includegraphics[width=0.2\textwidth]{./Figures/ee_to_Zemu.eps}
+}
+\hfill
+\subfigure[Charge conservation violation at the Higgs boson production vertex.]{
+\includegraphics[width=0.2\textwidth]{./Figures/ee_to_WH.eps}
+}
+\hfill
+\subfigure[Four-fermion interaction vertices do not exist in the Standard Model.]{
+\includegraphics[width=0.2\textwidth]{./Figures/ud_to_ud.eps}
+}
+\hfill
+\subfigure[There is a broken fermion line at both vertices (violation of charge, angular momentum, baryon number conservation).]{
+\includegraphics[width=0.2\textwidth]{./Figures/ug_to_g.eps}
+}
+\hspace{1cm}
+\subfigure[The Higgs boson does not couple directly with particles with no mass.]{
+\includegraphics[width=0.2\textwidth]{./Figures/uu_to_Hgamgam.eps}
+}
+\end{center}
+\caption{Examples of processes which are not allowed in the Standard Model, with a quick explanation of why they are not allowed.}
+\label{fig:forbidden_feyn}
+\end{figure}
+
+
 
 \subsection{Special relativity and units}
 
@@ -134,6 +197,15 @@ The magnitude of the 4-vector corresponding to the sum of the two proton 4-vecto
 
 By the way: the frame in which the proton-proton collision happens at rest (the laboratory frame) does not coincide with that in which the parton collision happens at rest. With respect to the laboratory frame, the parton-parton collision happens in a system which is boosted along the beam axis by $p_{\mathrm{boost}} = |x_1-x_2| \ebeam$.
 
+ \begin{figure}[!h]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{./Figures/collider_physics_variables.png}
+\end{center}
+\caption{Diagram of the kinematic variables used at a hadron collider. The $z$ axis coincides with the beam axis.}
+\label{fig:collider_variables}
+\end{figure}
+
+
 Let's recap: on an \textbf{event-by-event basis}, the parton-parton collision happens in a frame with a different boost with respect to the laboratory frame, and the collision energy is smaller than the nominal proton-proton centre-of-mass energy. 
 
 \begin{mybox}
@@ -160,6 +232,38 @@ And now we have a problem, because three variables do not determine a 4-vector, 
 y &= \frac{1}{2} \ln \left(\frac{\mathbf{E} + p_z}{\mathbf{E} + p_z} \right) \\
 \eta &= -\ln \tan \frac{\theta}{2}
 \end{align*}
+
+\subsection{Cross-section and luminosity}
+
+Imagine you have a beam of particles impinging on a slab of targets, and that the targets are small enough that you can neglect shielding effects of one target with respect to another. The total number of interactions that you will observe per unit time will be determined by characteristics of the beam of particles (how many particles per unit surface per unit time you are shooting, that is, the incoming flux of particles), by the target density, and finally by the transverse area that the targets offer to the beam, that is, the cross-section of the individual targets. 
+
+Inheriting this language, we define the cross-section and the luminosity of a given process at a hadron collider such that the number of occurrences of that process that we observe per unit time is given by: 
+
+\begin{align*}
+\frac{dN}{dt} = \sigma \times \mathcal{L}
+\end{align*} 
+
+In the example above, the luminosity is something connected with how many protons per beam we have, how many beams are circling the LHC, etc., while the cross-section is intrinsically connected with the physical interaction yielding a given process. The cross-section units are those of a surface (cm$^2$, for example\footnote{Particle physics cross sections are normally expressed in barns, where $1\ \mathrm{barn} = 10^{-24}\ \mathrm{cm}^2$}), while those of the luminosity are
+
+\begin{align*}
+[\mathcal{L}] =  [\mathrm{surface}]^{-1}\cdot [\mathrm{time}]^{-1}.
+\end{align*}
+
+The total number of events we will count for a given process in a given period of time is of course given by 
+
+\begin{align}
+N = \int_{\Delta T} \frac{dN}{dt} dt = \int_{\Delta T} \sigma \times \mathcal{L} dt &= \sigma \int_{\Delta T} \mathcal{L} dt = \sigma \Lint, \\ 
+\Lint &= \int_{\Delta T} \mathcal{L} dt.
+\end{align}
+
+The data collected by a given experiment over a period of time are typically expressed with the corresponding \textit{integrated luminosity} $\Lint$. Let's make an example. The ATLAS experiment has collected a number of proton-proton collisions corresponding to $\Lint = 139\ \ifb$ during the so-called Run 2 at $\sqrt{s} = 13\ \TeV$. The production cross-section for top pairs is predicted to be $\sigma_{t\bar{t}} = 831\ \mathrm{pb}$. Let's compute how many top pair production events we expect to have collected during the full Run 2: 
+
+\begin{align*}
+N_{t\bar{t}} = \sigma_{t\bar{t}} \times \Lint &= 831 \times 10^{-12} \ \mathrm{barns} \times 139 \times \left(10^{-15}\ \mathrm{barns}\right)^{-1} \\
+N_{t\bar{t}} &= 1.16\times 10^{8}
+\end{align*}
+
+So, we expect something like 116 million top pairs to have been produced during Run 2 in ATLAS.
 
 
 

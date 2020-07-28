@@ -24,8 +24,21 @@
 
 \input{structure.tex} % Include the file specifying the document structure and custom commands
 
+\usepackage[
+    backend=biber,
+    style=numeric-comp,
+    sortlocale=de_DE,
+    natbib=true,
+    url=false, 
+    doi=true,
+    eprint=false
+]{biblatex}
+\addbibresource{main.bib}
 
-\usepackage{atlasunit}
+\usepackage[]{hyperref}
+\hypersetup{
+    colorlinks=true,
+}
 
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
@@ -254,4 +267,6 @@
 %
 %%----------------------------------------------------------------------------------------
 %
+\printbibliography
+
 \end{document}

@@ -30,6 +30,10 @@
 \usepackage{graphicx} % Required for inserting images
 \graphicspath{{Figures/}{./}} % Specifies where to look for included images (trailing slash required)
 
+\usepackage{subfigure}
+\usepackage{atlasunit}
+\usepackage{url}
+
 \usepackage{booktabs} % Required for better horizontal rules in tables
 
 \numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
@@ -106,6 +110,7 @@
 %-------------------------------------------------------------------------------
   \newtcolorbox{mybox}{colback=blue!5!white, colframe=blue!75!black}
   \newcommand{\ebeam}{\ensuremath{E_{\mathrm{beam}}}\xspace}
-  \newcommand{\pt}{\ensuremath{_{\mathrm{T}}}\xspace}
+  \newcommand{\pt}{\ensuremath{p_{\mathrm{T}}}\xspace}
+    \newcommand{\Lint}{\ensuremath{\mathcal{L}_{\mathrm{int}}}\xspace}
 
 

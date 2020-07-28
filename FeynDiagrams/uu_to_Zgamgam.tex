@@ -1,0 +1,52 @@
+\input{./header.tx}
+% KEEP SIZE LOW SO THE LETTERS ARE LARGE
+\begin{fmfgraph*}(100,75)
+
+% PROTON-PROTON VERTEX
+\fmfleft{e1,e2} 
+\fmflabel{$u$}{e1}
+\fmflabel{$\bar{u}$}{e2}
+%\fmfv{lab=$g$,lab.an=-120}{g1}
+%\fmfv{lab=$g$,lab.an=120}{g2}
+\fmf{fermion,tension=3}{e1,v1,e2}
+%\fmf{fermion,tension=3}{g2,g2Vertex}
+%\fmfv{d.sh=circle,d.fi=30,d.si=10}{g1Vertex}
+%\fmfv{d.sh=circle,d.fi=30,d.si=10}{g2Vertex}
+%\fmfv{d.sh=circle,d.fi=30,d.si=10}{ppVertex}
+%\fmf{phantom}{ppVertex,virtual}
+%\fmfright{virtual}
+%\fmffreeze
+\fmfright{mu1,mu2}
+\fmflabel{$\gamma$}{mu1}
+\fmflabel{$\gamma$}{mu2}
+\fmf{photon,tension=3}{v2,mu1}
+\fmf{photon,tension=3}{v2,mu2}
+% UPPER CASCADE, EDIT BELOW
+%\fmf{gluino,lab=\color{red}\gluino,lab.side=left,fore=red,tension=3}{ppVertex,v1}
+%\fmfv{d.sh=circle,d.fi=30,d.si=5}{v1}
+%\fmfv{d.sh=circle,d.fi=30,d.si=10}{DMVertex1}
+%\fmfv{d.sh=circle,d.fi=30,d.si=10}{DMVertex2}
+
+%\fmf{plain,lab.side=right,tension=3}{b1,g1Vertex,DMVertex1,g2Vertex,b2}
+\fmf{dashes,lab=$Z$,lab.side=right,tension=1}{v1,v2}
+
+
+%\fmf{ewkino,fore=red}{LSP1,DMVertex2}
+%\fmf{ewkino,fore=red}{LSP2,DMVertex2}
+
+%\fmflabel{\color{red}\nino}{LSP2}
+%\fmflabel{\color{red}\nino}{LSP1}
+    
+%\fmf{plain}{g2Vertex,b2}
+%\fmflabel{$b$}{b1}
+%\fmf{plain}{g2Vertex,b2}
+%\fmflabel{$b$}{b2}
+%\fmflabel{\color{red}$\chi$}{LSP1}
+%\fmflabel{\color{red}$\chi$}{LSP2}
+
+
+% ORDER OF FINAL PARTICLES: BOTTOM, RIGHT, TOP    
+
+
+\end{fmfgraph*}
+\input{footer.tx}
