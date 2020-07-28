@@ -249,7 +249,7 @@ In the example above, the luminosity is something connected with how many proton
 [\mathcal{L}] =  [\mathrm{surface}]^{-1}\cdot [\mathrm{time}]^{-1}.
 \end{align*}
 
-The total number of events we will count for a given process in a given period of time is of course given by 
+A typical number $\mathcal{L}$ during Run 2 is $\mathcal{L} \sim 2\times 10^{34}$ cm$^{-2}$ s$^{-1}$. for The total number of events we will count for a given process in a given period of time is of course given by 
 
 \begin{align}
 N = \int_{\Delta T} \frac{dN}{dt} dt = \int_{\Delta T} \sigma \times \mathcal{L} dt &= \sigma \int_{\Delta T} \mathcal{L} dt = \sigma \Lint, \\ 
@@ -263,8 +263,19 @@ N_{t\bar{t}} = \sigma_{t\bar{t}} \times \Lint &= 831 \times 10^{-12} \ \mathrm{b
 N_{t\bar{t}} &= 1.16\times 10^{8}
 \end{align*}
 
-So, we expect something like 116 million top pairs to have been produced during Run 2 in ATLAS.
+So, we expect something like 116 million top pairs to have been produced during Run 2 in ATLAS. 
 
+\begin{figure}[tb] 
+	\centering
+	\includegraphics[width=0.7\columnwidth]{Figures/SM_summary.png}
+	\label{fig:SM_summary}
+	\caption{Predictions and ATLAS measurements for the production cross sections of several Standard Model processes. Taken from Ref.~\cite{SM_summary}}
+\end{figure}
 
+Now, let's take a close look at Figure~\ref{fig:SM_summary}. It shows the cross-sections for several SM processes at the LHC, for different proton-proton centre-of-mass energies. The proton-proton inelastic cross-section at $\sqrt{s} = 13\ \TeV$ is about $80$ mb. Let's consider one random process as an example, say $WW$ production. The plot tells us that the production cross section is between 100 and 200 pb - let's take 160 pb. So, from the ratio of these numbers, we learn that only one in 500,000 proton-proton collisions will produce $WW$. 
 
-
+\begin{mybox}
+\begin{ExerciseList}
+\Exercise From Figure~\ref{fig:SM_summary}, the Higgs boson production cross-section is $\sigma = 80$ pb. Compute how many Higgs bosons LHC has produced during Run 2, and using the typical value for $\mathcal{L}$ given above, compute how many Higgs bosons per minute the LHC is producing when running at that luminosity. 
+\end{ExerciseList}
+\end{mybox}
