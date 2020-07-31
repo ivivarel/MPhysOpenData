@@ -9,7 +9,7 @@ Depending of the property one is interested in, particles can be grouped in a fe
 
 \begin{itemize}
 \item If one is interested in their spin properties, particles are divided into \textbf{fermions}, whose spin is fractional (like $1/2$, $3/2$, etc.), and \textbf{bosons}, whose spin is integer. All elementary particles that constitute ordinary matter (the up and down quarks, the electrons) are fermions. All particles that mediate an interaction (the photon, the Higgs boson, etc.) are bosons.
-\item If one is interested in their spacial size, particles are divided into \textbf{elementary} (more on them later), that should be imagined essentially as a geometrical point in space, with no physical size, and \textbf{composite}, that is, bound states of other particles. Examples of elementary particles are the electron and the quarks. COmposite particle examples are the proton and the neutron. 
+\item If one is interested in their spacial size, particles are divided into \textbf{elementary} (more on them later), that should be imagined essentially as a geometrical point in space, with no physical size, and \textbf{composite}, that is, bound states of other particles. Examples of elementary particles are the electron and the quarks. Composite particle examples are the proton and the neutron. 
 \item If one is interested in the interactions they feel, particles are divided into \textbf{leptons}, that interact through gravity and the electroweak force, and \textbf{hadrons} which interact through gravity, the electroweak force and the strong nuclear force. The electron and neutrinos are leptons, the quarks are hadrons.
 \end{itemize}
 
@@ -27,7 +27,7 @@ Particle are objects with a mass of the order of the proton one. There are large
 
 \subsection{The Standard Model of Particle Physics} 
 
-The best theory of particle physics we have available is the so--called Standard Model of Particle Physics (SM in the following). It specifies the full list of particles, their properties and their interactions. Table~\ref{tab:SM} summarises the particle content of the SM. There are three leptonic families (in green). In each leptonic family, there is a charged lepton and a neutrino of the same flavour. There are also three quark families (in purple). In each quark family there is a quark with charge $+\frac{2}{3}$ and one with charge $-\frac{1}{3}$. Each quark defines its own flavour. Not shown in the table: for each particle family there is an identical family composed by anti-particles. So, for the family composed by the electron and its neutrino, there is a family composed by a positively charged electron (the positron) and an antineutrino. 
+The best theory of particle physics we have available is the so--called Standard Model of Particle Physics (SM in the following). It specifies the full list of particles, their properties and their interactions. Table~\ref{tab:SM} summarises the particle content of the SM. There are three leptonic families (in green). In each leptonic family, there is a charged lepton and a neutrino of the same flavour. There are also three quark families (in purple). In each quark family there is a quark with charge $+\frac{2}{3}$ and one with charge $-\frac{1}{3}$. Each quark defines its own flavour. Not shown in the table: for each particle family there is an identical family composed by anti-particles. So, for the family composed by the electron and its neutrino, there is a family composed by a positively charged electron (the positron) and an antineutrino, and same for the quarks. 
 
 There are also bosons, that mediates the interactions between the particles in the leptonic and quark families (in red). These are: 
 \begin{itemize}
@@ -150,6 +150,9 @@ s = t^2 - \mathbf{x} \cdot \mathbf{x}
 \end{ExerciseList}
 \end{mybox}
 
+\subsubsection{Invariant Mass}
+\label{sec:invariant_mass}
+
 The fact that for a 4-vector of type $\left(\mathbf{m}_x, m_t\right)$ the product $s_{m} = m_t^2 - \mathbf{m}_x \cdot \mathbf{m}_x$ is Lorentz-invariant (that is, it is the same in every reference frame, regardless of its boost) is general. The number $\sqrt{s_{m}} = \sqrt{m_t^2 - \mathbf{m}_x \cdot \mathbf{m}_x}$ is the \textit{magnitude} of the 4-vector. As pointed out earlier, the energy and momentum form a 4-vector $\left(\mathbf{p},E\right)$. Therefore the combination $s = E^2-p^2$ (where $p$ indicates the magnitude of $\mathbf{p}$) is Lorentz-invariant. What is the value of this Lorentz-invariant quantity? Let's consider a particle of mass $m$. In its own rest frame: 
 
 \begin{align*} 
@@ -161,6 +164,7 @@ s^2 &= E^2 - p^2 = m^2
 \noindent But since $s^2$ is Lorentz-invariant, \textit{this mathematical combination of the momentum and the energy of the particle will yield the particle mass regardless of the rest frame where it is computed!}. We will use this fact repeatedly.
 
 \subsection{Proton-proton Collisions - Collider Physics Variables}
+\label{sec:collider_physics_variables}
 
 In this experiment, we will study proton-proton collisions produced by the LHC and recorded by ATLAS. The LHC collides two beams of protons head-on. The energy of the protons in each beam is $\ebeam = 6.5\ \TeV$. 
 
@@ -234,6 +238,7 @@ y &= \frac{1}{2} \ln \left(\frac{\mathbf{E} + p_z}{\mathbf{E} + p_z} \right) \\
 \end{align*}
 
 \subsection{Cross-section and luminosity}
+\label{sec:cross_section_lumi}
 
 Imagine you have a beam of particles impinging on a slab of targets, and that the targets are small enough that you can neglect shielding effects of one target with respect to another. The total number of interactions that you will observe per unit time will be determined by characteristics of the beam of particles (how many particles per unit surface per unit time you are shooting, that is, the incoming flux of particles), by the target density, and finally by the transverse area that the targets offer to the beam, that is, the cross-section of the individual targets. 
 

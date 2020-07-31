@@ -66,27 +66,52 @@
 
 \maketitle % Print the title
 
+\clearpage
+
+\tableofcontents
 
 \newpage
 
 \section{Introduction} 
 \input{tex/introduction}
 
-\section{Objectives} 
+\section{Objectives}
+\label{sec:objectives} 
 \input{tex/objectives}
 
+\clearpage
+
 \section{Particle Physics} 
+\label{sec:particle_physics}
 \input{tex/particle_physics}
 
-\section{ATLAS and the Open Data}
+\clearpage
+
+\section{ATLAS}
+\label{sec:ATLAS}
 \input{tex/ATLAS_OpenData}
 
-\section{Software Tools}
+
+\clearpage
+
+\section{Open data: practical guide}
+\label{sec:open_data}
 \input{tex/software_tools}
 
+\clearpage
+
 \section{Experiments}
+\label{sec:experiments}
 \input{tex/experiments}
 
+\clearpage
+
+
+\appendix
+\addcontentsline{toc}{section}{APPENDICES}
+
+%\section{Variable Description}
+%\input{tex/OpenDataVariableList} 
 
 
 

@@ -1,1 +1,90 @@
 % !TEX root = ../main.tex
+
+
+
+\subsection{Experiment 1: Understanding $H\rightarrow 4\ell$}
+
+In this experiment we will dig deeper into the $H\rightarrow ZZ$ analysis that we have seen earlier. Please document everything you do, including the answers to the questions below, in your logbook. It is suggested you make a copy of the HZZAnalysis.py before you start to modify it.
+
+\begin{enumerate} 
+\item Edit the file to print the histogram integrals of the different processes: $ZZ\rightarrow 4\ell$ (red histogram), $Z$ and $\ttbar$ production (shown together in purple), $H\rightarrow ZZ$ (cyan), and, finally, the data. From the discussion about MC weights in Section~\ref{sec:review_notebook}, it should be clear that the integral of the histograms and the actual number of events are different for MC (because of all the applied weights), while they will coincide for the data. 
+\item Validate these printouts: try to have a rough estimate of those integrals by looking at the output histogram of the code. Make sure that the rough estimate and the exact printouts are in the same ballpark.
+\item Compute the total expected background $B$ by summing the integrals of the $ZZ$, $Z$ and $\ttbar$ processes. We will now compute its agreement with the observed data yield $O$: 
+\end{enumerate}
+
+\begin{mybox}
+\begin{itemize} 
+\item The total background $B$ represents the number of events that one \textit{expects}. Suppose I expect 100 events: the outcome of the actual experiment in general will not be exactly 100. \textit{Assuming that the background expectation is correct}, the probability of a given outcome will be described by a Poisson probability function. 
+\item Please review the properties of a Poisson probability function. What is the RMS of a Poisson distribution of mean value $\mu$?
+\item Evaluate the level of compatibility of your data yield $O$ by computing the probability $p(O \ge B)$ (if $O<B$, define $p = 0.5$). Such probability is known as a $p$-value. What is the p-value? Small values of the $p$-value indicate low level of compatibility of the hypothesis tested (in this case that the observed yield comes from an expected background level $B$). 
+\item Physicists like to convert $p$-values. This conversion can be done for example using \href{https://planetcalc.com/7803/}{this web site}. A high $z$ score, or significance, corresponds to a low level  compatibility of the hypothesis tested (in this case that the observed yield comes from an expected background level $B$). What is the significance in this case?
+\end{itemize}
+\end{mybox}
+
+\begin{enumerate}[resume]
+\item Repeat the points above, but this time compute the background and the observation only in the invariant mass range $120\ \GeV < m_{4\ell} < 130\ \GeV$. What are the p-values and the significance now? 
+\item Assume that the difference between the background and observation in the range  $120\ \GeV < m_{4\ell} < 130\ \GeV$ is now a yield due to $H \rightarrow 4\ell$. Knowing that the fraction of Higgs boson production that you select with this analysis is $\epsilon = 2 \times 10^{-5}$ (coming from $BR(H\rightarrow ZZ)=2.6\times 10^{-2}$, $BR(Z\rightarrow \ell\ell) \sim 6\%$, where $\ell = e, \mu$, plus some inefficiency in reconstructing leptons), what is your estimate for the production cross-section of the Higgs boson? Do your best to associate an error to it coming from the number of observed events, and compare to the standard model best prediction of $\sigma(H) = 55$ pb at $\sqrt{s} = 13\ \TeV$, with an uncertainty of 5\%. 
+\item Assuming your estimate for the signal and background, how much integrated luminosity would you need to declare a $5\sigma$ discovery?
+\end{enumerate}
+
+\subsection{Experiment 2: Plot the di-electron and di-muon invariant mass in data}
+
+In this experiment we will try to use data only to plot the di-lepton invariant mass in events with two leptons, and we will se what the meaning of the cuts on isolation on lines 27 and 31 of \verb|HZZCuts.py| actually do. Finally, we will try to understand the mass resolution for the measurement of $Z\rightarrow e^+e^-$ and $Z\rightarrow \mu^+\mu^-$. We will start from a copy of \verb|HZZAnalysis.py| and associated modules and heavily modify them. To start with, copy \verb|HZZAnalysis.py|, \verb|HZZCuts.py|, \verb|HZZHistograms.py|, \verb|HZZSamples.py|, into new files \verb|ZeeAnalysis.py|, \verb|ZeeCuts.py|, etc. 
+
+\begin{mybox}
+\textbf{TIP:} When modifying and playing with the code, reduce \verb|fraction| to something like 0.1 or even lower, to speed up the code while debugging.
+\end{mybox}
+
+
+\begin{enumerate} 
+\item Edit the ntuple path to point to the 2lep events rather than the 4lep ones. 
+\item Change the Histograms to show only one variable, $m_{ee}$ and plot it from 0\ \GeV to 200\ \GeV in log scale. 
+\item Change the cuts file to have only one cut, where you reject events if the leading two leptons are not electrons of opposite charge. 
+\item Change the samples to have only the data ones. 
+\item Adapt the plotting code to plot only the data. 
+\item Add a variable to the DataFrame ($m_{ee}$), similar to what was done with $m_{4\ell}$ in the \verb|HZZAnalysis.py| example.
+\item Plot the $m_{ee}$. 
+\end{enumerate}
+
+\begin{mybox}
+The histogram should display a peak at about 90 GeV, with a lot of events at different masses. The peak at 90 GeV is clearly due to $Z\rightarrow e^+ e^-$, but.... what are all other events?
+\end{mybox}
+
+\begin{enumerate} [resume]
+\item  Try to add cuts that select on the lepton isolation variables, looking at the examples in  \verb|HZZCuts.py|. What you want is to reject events where either the first or the second leading lepton is not isolated. 
+\item Plot again the invariant mass. Comment on differences that you see, especially at small values of $m_{ee}$. 
+\end{enumerate}
+
+\begin{mybox}
+There are two main categories of leptons that the detector sees: genuine leptons and fake leptons. Genuine leptons are those where reconstruction correctly identifies a lepton as such. Fake leptons are those where the reconstruction thinks there is a lepton, but in fact there wasn't. 
+
+Genuine leptons, in turn, are divided into two categories: prompt leptons arise from an on shell $W$ or $Z$ going to leptons (like in $pp\rightarrow Z\rightarrow e^+ e^-$, or $\ttbar \rightarrow WWbb \rightarrow \mu \nu_{\mu} jjbb$). These leptons are \textit{isolated}, that is, normally do not have other particles nearby. Non-prompt leptons are emitted in hadrons decay, like $B_0\rightarrow e^-\nu K^+$, and they tend to be non-isolated. Isolation is a powerful variable to reject fake and non-prompt leptons.   
+\end{mybox}
+
+\begin{enumerate} [resume]
+\item Fit the $Z$ peak in data with a gaussian. Now repeat the analysis selecting muons instead of electrons, and fit the $Z\rightarrow \mu\mu$ peak with a gaussian. Compare the widths of the two gaussians. Which one is larger? Can you try to guess why?  
+\end{enumerate}
+
+\subsection{Experiment 3: Understanding the events outside the mass window}
+
+In this experiment we will start from the previous one and understand what the other non-$Z$ events in the di-lepton sample actually are. Let's focus on the sample with two opposite charge electrons in the final state. 
+
+\begin{mybox}
+\textbf{TIP:} When modifying and playing with the code, reduce \verb|fraction| to something like 0.1 or even lower, to speed up the code while debugging.
+\end{mybox}
+
+
+\begin{enumerate} 
+\item Change the Histograms file to add a missing et plot. The range will need to be something like 0\ \GeV to 300\ \GeV in log scale. 
+\item Change the samples list to include \ttbar, and diboson ($WW$, $WZ$ and $ZZ$, with DSID in the range 363356 to 363493 - select those that contain two leptons) production.   
+\item Modify the plotting code to include the MC, similarly to what you had for \verb|HZZAnalysis.py|
+\item Plot the $m_{ee}$ and $E_{T}^{miss}$.
+\item Add a cut to reject events with $m_{ee}$ on the $Z$ peak. Plot again the $E_{T}^{miss}$. 
+\item Comment about the results. What are the events which are not $Z$ in this data sample? Why do they tend to have a larger missing transverse momentum than $Z$ events?  Plot the expected composition of the data (what fraction is $Z$, what fraction is the rest) for $ E_{T}^{miss} > X$ as a function of $X$.
+\end{enumerate}
+
+\begin{mybox}
+\textbf{Bonus task:} DSIDs from 392501 to 392521 contain events from physics processes which are not foreseen by the Standard Model, but by some extension of it. Do you want to try and see whether you will be able to discover new physics using the ATLAS Data? Those new processes are $pp\rightarrow \tilde{\chi}^+_1  \tilde{\chi}^-_1 \rightarrow 2\tilde{\chi}^0_1 2\nu \ell^+\ell'^-$. All you need to know is that the new particle $\tilde{\chi}^0_1$ behaves like a neutrino in the detector, and that $\ell$ and $\ell'$ may be of the same flavour or not. Can you design a selection where events would be mostly populated by these events? 
+\end{mybox}
+
+
