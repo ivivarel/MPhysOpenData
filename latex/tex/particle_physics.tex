@@ -1,4 +1,4 @@
-% !TEX root = ../main.tex
+% !TEX root = ../main_orange.tex
 
 
 Particle physics is an area of physics that deals with the behaviour of the most basic constituents of matter and their mutual interaction. This section wants to serve as a \textbf{very} compact summary of the main aspects of particle physics that you need to know to be able to run this experiment. The book which is used in the particle physics module here at the University of Sussex is the one listed in Ref.~\cite{shaw}: you may want to have a look there for more details. 
@@ -15,7 +15,7 @@ Depending of the property one is interested in, particles can be grouped in a fe
 
 Other groupings are possible: we will introduce them if and when they will be needed. In the following, the word ``particle'' will be used with the meaning of ``elementary particle'', unless stated otherwise.
 
-Particle are objects with a mass of the order of the proton one. There are large variations on this order of magnitude: the heaviest known elementary particle is the top quark, whose mass is about 172 times that of the proton. The electron is the lightest massive particle, with a mass of about half of a thousandth of a proton. Massless particles exist as well (the photon mass is zero, that of the neutrinos is very small although not zero).
+Particles are objects with a mass of the order of that of the proton. There are large variations on this order of magnitude: the heaviest known elementary particle is the top quark, whose mass is about 172 times that of the proton. The electron is the lightest massive particle, with a mass of about half of a thousandth of a proton. Massless particles exist as well (the photon mass is zero, that of the neutrinos is very small although not zero).
 
 \begin{figure}[tb] 
 	\centering
@@ -25,11 +25,11 @@ Particle are objects with a mass of the order of the proton one. There are large
 \end{figure}
 
 
-\subsection{The Standard Model of Particle Physics} 
+\section{The Standard Model of Particle Physics} 
 
 The best theory of particle physics we have available is the so--called Standard Model of Particle Physics (SM in the following). It specifies the full list of particles, their properties and their interactions. Table~\ref{tab:SM} summarises the particle content of the SM. There are three leptonic families (in green). In each leptonic family, there is a charged lepton and a neutrino of the same flavour. There are also three quark families (in purple). In each quark family there is a quark with charge $+\frac{2}{3}$ and one with charge $-\frac{1}{3}$. Each quark defines its own flavour. Not shown in the table: for each particle family there is an identical family composed by anti-particles. So, for the family composed by the electron and its neutrino, there is a family composed by a positively charged electron (the positron) and an antineutrino, and same for the quarks. 
 
-There are also bosons, that mediates the interactions between the particles in the leptonic and quark families (in red). These are: 
+There are also bosons, that mediate the interactions between the particles in the leptonic and quark families (in red). These are: 
 \begin{itemize}
 \item The photon, that mediates the electromagnetic interaction between charged particles. 
 \item The $W^+, W^{-}$ and $Z$ bosons, which mediate the weak interaction between leptons and between quarks. 
@@ -38,17 +38,17 @@ There are also bosons, that mediates the interactions between the particles in t
 
 Finally, the Higgs boson is shown in yellow: it interacts with all particles with an intensity that is proportional to the particle mass. 
 
-We will use a helpful graphical tool to represent interactions between particles. These are the Feynman diagrams. Please bear in mind that we will use them only as a graphical tool, but they are actually a representation of quantitative mathematical expressions that allow to precisely calculate how likely a given process is to occur. In this graphs, we will always represent incoming particles to the left and outgoing particles on the right. 
+We will use a helpful graphical tool to represent interactions between particles. These are the Feynman diagrams. Please bear in mind that we will use them only as a graphical tool, but they are actually a representation of quantitative mathematical expressions that allow to precisely calculate how likely a given process is to occur. In these graphs, we will always represent incoming particles on the left and outgoing particles on the right. 
 
 There are important rules that have to be respected when drawing possible Feynman diagrams:
 \begin{enumerate}
 \item Electric charge, momentum, energy and angular momentum are always conserved at a vertex.
-\item Fermions are represented with arrows. An incoming fermion is represented with an incoming arrow, while an outgoing fermion is represented with an outgoing arrow. For anti-fermions, rules are reversed: an incoming anti-fermion is represented with an outgoing arrow, while an outgoing anti-fermion is represented with an incoming arrow. See examples in Figure~\ref{fig:feyn_example}. 
+\item Fermions are represented with arrows. An incoming (in a vertex) fermion is represented with an incoming arrow, while an outgoing fermion is represented with an outgoing arrow. For anti-fermions, rules are reversed: an incoming anti-fermion is represented with an outgoing arrow, while an outgoing anti-fermion is represented with an incoming arrow. See examples in Figure~\ref{fig:feyn_example}. 
 \item The total number of leptons has to be conserved. Each lepton contributes to the number of leptons with an additive $+1$, while each anti-lepton with an additive $-1$.
 \item Likewise, the total number of quarks has to be conserved. Each quark contributes with an additive $+\frac{1}{3}$, while each anti-quark with an additive $-\frac{1}{3}$
 \item As a consequence of rule 1 for angular momentum, a three-line vertex can only be: two fermions and a boson; three bosons.
 \item Gluons interact only with quarks and other gluons. 
-\item The $Z$ and $\gamma$ bosons always conserves the flavour. So, $Ze^+e^-$, $Zu\bar{u}$, $\gamma c\bar{c}$ are perfectly legal vertices, $Z e^+ \mu^{-}$, $Zc\bar{s}$ and $\gamma e^-\mu^+$ are not.
+\item The $Z$ and $\gamma$ bosons always conserve the flavour. So, $Ze^+e^-$, $Zu\bar{u}$, $\gamma c\bar{c}$ are perfectly legal vertices, $Z e^+ \mu^{-}$, $Zc\bar{s}$ and $\gamma e^-\mu^+$ are not.
 \item The $Z$ boson does not interact with the photon.
 \item The $W$ boson interaction conserves the leptonic flavour. So $We\bar{\nu}_e$ is a legal vertex, but $We\bar{\nu}_{\mu}$ is not. 
 \end{enumerate}
@@ -109,15 +109,15 @@ Figure~\ref{fig:feyn_example}~\footnote{In this handbook, we will always deal wi
 
 
 
-\subsection{Special relativity and units}
+\section{Special relativity and units}
 
-In particle physics it is customary to choose a system of units in which the value of the Planck constant $\hbar$ and the speed of light $c$ are both set to unit: $\hbar = c = 1$. Energy and momentum are therefore measured with the same unit. Often the electronvolt (eV) is the energy unit chosen. For the applications of this experiment, we will be using MeV, GeV and TeV. Because of the Heisenberg uncertainty principle, the unit for space is also fixed: 
+In particle physics it is customary to choose a system of units in which the value of the Planck constant $\hbar$ and the speed of light $c$ are both set to unity: $\hbar = c = 1$. Energy and momentum are therefore measured with the same units. Often the electronvolt (eV) is the energy unit chosen. For the applications of this experiment, we will be using MeV, GeV and TeV. Because of the Heisenberg uncertainty principle, the unit for space is also fixed: 
 
-\begin{align*}
+\begin{align}
 \Delta p \Delta x \sim \hbar = 1 \implies [x] = \frac{1}{[p]}  = \frac{1}{\mathrm{MeV}}
-\end{align*}
+\end{align}
 
-Likewise, from $\Delta p \Delta x \sim \hbar = 1$, it follows that time has the same units of space. From $E=mc^2$, it follows that mass and energy have the same units. 
+Likewise, from $\Delta E \Delta t \sim \hbar = 1$, it follows that time has the same units of space. From $E=mc^2$, it follows that mass and energy have the same units. 
 
 
 The particle free motion is described in terms of their energy $E$ and momentum $\mathbf{p}$. The three momentum components and the energy form a so-called 4-vector, with the same transformation properties of another 4-vector that you are familiar with: that formed by the three cartesian coordinates and the time. Let's refresh the main properties of the 4-vector $(\mathbf{x},t)$ (note we are using units where $c = 1$, otherwise this vector would mix quantities with different dimensions). For a change of reference frame from a frame $S$ to one $S'$ moving with speed $v$ along $\hat{x}$ with respect to $S$, the 4-vector transforms into $(\mathbf{x'},t')$ such that:
@@ -132,60 +132,59 @@ t' &= \gamma \left(t + \beta x\right)
 
 The symbols $\gamma$ and $\beta$ are defined (for $c=1$) by: 
 
-\begin{align*}
+\begin{align}
 \gamma = \frac{1}{\sqrt{1-v^2}} \qquad \beta = \frac{v}{c} = v
-\end{align*}
+\end{align}
 
 These transformations are such that the product 
 
-\begin{align*}
+\begin{align}
 s = t^2 - \mathbf{x} \cdot \mathbf{x}
-\end{align*}
+\end{align}
 
 \noindent is invariant for Lorentz transformations, that is, its value is the same in the reference frame $S$ or in any other boosted frame $S'$. 
 
-\begin{mybox}
-\begin{ExerciseList}
-\Exercise Prove it! Prove that  $t^2 - \mathbf{x} \cdot \mathbf{x} =  t'^2 - \mathbf{x'} \cdot \mathbf{x'}$, where the primed quantities are connected to the non-primed ones by a Lorenz transformation line in eq.~\ref{eq:lorentz_transform}
-\end{ExerciseList}
-\end{mybox}
+\begin{exercise}
+Prove it! Prove that  $t^2 - \mathbf{x} \cdot \mathbf{x} =  t'^2 - \mathbf{x'} \cdot \mathbf{x'}$, where the primed quantities are connected to the non-primed ones by a Lorenz transformation line in eq.~\ref{eq:lorentz_transform}
+\end{exercise}
 
-\subsubsection{Invariant Mass}
+
+\subsection{Invariant Mass}
 \label{sec:invariant_mass}
 
 The fact that for a 4-vector of type $\left(\mathbf{m}_x, m_t\right)$ the product $s_{m} = m_t^2 - \mathbf{m}_x \cdot \mathbf{m}_x$ is Lorentz-invariant (that is, it is the same in every reference frame, regardless of its boost) is general. The number $\sqrt{s_{m}} = \sqrt{m_t^2 - \mathbf{m}_x \cdot \mathbf{m}_x}$ is the \textit{magnitude} of the 4-vector. As pointed out earlier, the energy and momentum form a 4-vector $\left(\mathbf{p},E\right)$. Therefore the combination $s = E^2-p^2$ (where $p$ indicates the magnitude of $\mathbf{p}$) is Lorentz-invariant. What is the value of this Lorentz-invariant quantity? Let's consider a particle of mass $m$. In its own rest frame: 
 
-\begin{align*} 
+\begin{align} 
 E &= m \\ 
 \mathbf{p} &= 0 \\ 
 s^2 &= E^2 - p^2 = m^2
-\end{align*}
+\end{align}
 
 \noindent But since $s^2$ is Lorentz-invariant, \textit{this mathematical combination of the momentum and the energy of the particle will yield the particle mass regardless of the rest frame where it is computed!}. We will use this fact repeatedly.
 
-\subsection{Proton-proton Collisions - Collider Physics Variables}
+\section{Proton-proton Collisions - Collider Physics Variables}
 \label{sec:collider_physics_variables}
 
-In this experiment, we will study proton-proton collisions produced by the LHC and recorded by ATLAS. The LHC collides two beams of protons head-on. The energy of the protons in each beam is $\ebeam = 6.5\ \TeV$. 
+In this experience, we will study proton-proton collisions produced by the LHC and recorded by ATLAS. The LHC collides two beams of protons head-on. The energy of the protons in each beam is $\ebeam = 6.5\ \TeV$. 
 
 As said earlier, protons are not elementary particles. They are made by three \textit{valence} quarks (two $u$ and one $d$) and a \textit{sea} of other quark-antiquark pairs and gluons, which are created and destroyed continuously according to quantum mechanics. All these particles (the valence quarks and the sea quarks and gluons) take the generic name of \textit{partons}. 
 
 The scale for the proton binding energy is given by its own mass ($\sim 1\ \GeV$). With respect to the typical energy transfer in a LHC collision of interest, with energy exchanged of hundreds of GeV, the binding energy of the proton is small. Therefore the partons in the proton in a LHC collision \textbf{can be considered as free}: the LHC is indeed a parton collider. 
 
-Partons inside a proton however don't have the same energy/momentum as the proton of course: it is the sum of the energies and momenta of all partons that will yield the energy and momentum of the proton. Let's say that each parton $i$ in the collision carries a fraction $x_i$ of the momentum and energy of the proton. The 4-vectors of the protons are (neglecting the mass of the proton, and setting the $\hat{z}$ as beam axis) 
+Partons inside a proton however do not have the same energy/momentum as the proton of course: it is the sum of the energies and momenta of all partons that will yield the energy and momentum of the proton. Let's say that each parton $i$ in the collision carries a fraction $x_i$ of the momentum and energy of the proton. The 4-vectors of the protons and colliding partons are (neglecting all masses, and setting the $\hat{z}$ as beam axis) 
 
-\begin{align*}
+\begin{align}
 \mathrm{Proton 1}&: \left(0,0,\ebeam,\ebeam\right) \\
 \mathrm{Proton 2}&: \left(0,0,-\ebeam,\ebeam\right) \\
 \mathrm{Parton 1}&: \left(0,0,x_1\ebeam,x_1\ebeam\right) \\
 \mathrm{Parton 2}&: \left(0,0,-x_2\ebeam,x_2\ebeam\right) \\
-\end{align*}
+\end{align}
 
 The magnitude of the 4-vector corresponding to the sum of the two proton 4-vectors is 
 
-\begin{align*}
+\begin{align}
 \sqrt{s} = \sqrt{\left(2\ebeam\right)^2 - \left(\ebeam-\ebeam\right)^2} = \sqrt{4\ebeam} = 2\ebeam = 13\ \TeV
-\end{align*}
+\end{align}
 
 \noindent which is known as the centre-of-mass energy of the LHC. However, this is \textbf{not} the centre of mass energy of the parton-parton collisions! The actual particles colliding are the partons. Their own centre-of mass energy is:
 
@@ -193,11 +192,9 @@ The magnitude of the 4-vector corresponding to the sum of the two proton 4-vecto
 \sqrt{\hat{s}} = \sqrt{\left( x_1 + x_2 \right) ^2 \ebeam^2 - \left( x_1 - x_2\right)^2 \ebeam^2}
 \end{align*}
 
-\begin{mybox}
-\begin{ExerciseList}
-\Exercise Proove that this implies $\hat{s} = \sqrt{x_1 x_2} \sqrt{s}$
-\end{ExerciseList}
-\end{mybox}
+\begin{exercise}
+Proove that this implies $\hat{s} = \sqrt{x_1 x_2} \sqrt{s}$
+\end{exercise}
 
 By the way: the frame in which the proton-proton collision happens at rest (the laboratory frame) does not coincide with that in which the parton collision happens at rest. With respect to the laboratory frame, the parton-parton collision happens in a system which is boosted along the beam axis by $p_{\mathrm{boost}} = |x_1-x_2| \ebeam$.
 
@@ -212,15 +209,18 @@ By the way: the frame in which the proton-proton collision happens at rest (the 
 
 Let's recap: on an \textbf{event-by-event basis}, the parton-parton collision happens in a frame with a different boost with respect to the laboratory frame, and the collision energy is smaller than the nominal proton-proton centre-of-mass energy. 
 
-\begin{mybox}
-\begin{ExerciseList}
-\Exercise The mass of the top quark is 172 GeV. The SppS, a collider colliding protons and antiprotons at CERN, worked up to energies of $\sqrt{s} = 900\ \GeV$. Yet, we had to wait for the Tevatron ($\sqrt{s} = 1.8\ \TeV$) for the top quark discovery. Why?
+\begin{exercise}
+The mass of the top quark is 172 GeV. The SppS, a collider colliding protons and antiprotons at CERN, worked up to energies of $\sqrt{s} = 900\ \GeV$. Yet, we had to wait for the Tevatron ($\sqrt{s} = 1.8\ \TeV$) for the top quark discovery. Why?
+\end{exercise}
 
-\Exercise Draw one of the most relevant Feynman diagram for the production of the following particles at the LHC. If quarks are involved, specify if they are likely to be valence or sea quarks: $Z$ boson production, $W$ boson production, $t\bar{t}$ production.
+\begin{exercise}
+Draw one of the most relevant Feynman diagram for the production of the following particles at the LHC. If quarks are involved, specify if they are likely to be valence or sea quarks: $Z$ boson production, $W$ boson production, $t\bar{t}$ production.
+\end{exercise}
 
-\Exercise The mass of the $W$ boson is $m = 80\ \GeV$. In a given collision, the $W$ boson is produced by a collision of a valence quark with $x = 0.3$,  and a sea quark. Find $x$ of the sea quark and compute $p_{\mathrm{boost}}$ for this collision.
-\end{ExerciseList}
-\end{mybox}
+\begin{exercise}
+The mass of the $W$ boson is $m = 80\ \GeV$. In a given collision, the $W$ boson is produced by a collision of a valence quark with $x = 0.3$,  and a sea quark. Find $x$ of the sea quark and compute $p_{\mathrm{boost}}$ for this collision.
+\end{exercise}
+
 
 So, in practice what happens is that in each event, the LHC experiments look at a collision happening with an unknown boost along the $\hat{z}$ axis. There is one important implication: if we measure any variable which is not Lorentz-invariant, we would make a big confusion when measuring it in many events, because we would mix up values belonging to different reference frames! This implies we have to carefully choose the quantities that we measure at a hadron collider like the LHC to characterise the particles' final states: we should avoid using any variable relying on \textit{longitudinal} quantities, that is, quantities relying on variables measured along the $\hat{z}$ axis. Therefore, the variables we use at a hadron collider are (see also Figure~\ref{fig:collider_variables}) 
 
@@ -237,24 +237,30 @@ y &= \frac{1}{2} \ln \left(\frac{\mathbf{E} + p_z}{\mathbf{E} + p_z} \right) \\
 \eta &= -\ln \tan \frac{\theta}{2}
 \end{align*}
 
-\subsection{Cross-section and luminosity}
+\section{Cross-section and luminosity}
 \label{sec:cross_section_lumi}
 
-Imagine you have a beam of particles impinging on a slab of targets, and that the targets are small enough that you can neglect shielding effects of one target with respect to another. The total number of interactions that you will observe per unit time will be determined by characteristics of the beam of particles (how many particles per unit surface per unit time you are shooting, that is, the incoming flux of particles), by the target density, and finally by the transverse area that the targets offer to the beam, that is, the cross-section of the individual targets. 
+Imagine you have a beam of particles impinging on a slab of targets, and that the targets are small enough that you can neglect shielding effects of one target with respect to another. The total number of interactions that you will observe per unit time will be determined by:
+
+\begin{itemize}
+\item characteristics of the beam of particles (how many particles per unit surface per unit time you are shooting, that is, the incoming flux of particles),
+\item the target density,
+\item the transverse area that the targets offer to the beam, that is, the cross-section of the individual targets. 
+\end{itemize}
 
 Inheriting this language, we define the cross-section and the luminosity of a given process at a hadron collider such that the number of occurrences of that process that we observe per unit time is given by: 
 
-\begin{align*}
+\begin{align}
 \frac{dN}{dt} = \sigma \times \mathcal{L}
-\end{align*} 
+\end{align} 
 
 In the example above, the luminosity is something connected with how many protons per beam we have, how many beams are circling the LHC, etc., while the cross-section is intrinsically connected with the physical interaction yielding a given process. The cross-section units are those of a surface (cm$^2$, for example\footnote{Particle physics cross sections are normally expressed in barns, where $1\ \mathrm{barn} = 10^{-24}\ \mathrm{cm}^2$}), while those of the luminosity are
 
-\begin{align*}
+\begin{align}
 [\mathcal{L}] =  [\mathrm{surface}]^{-1}\cdot [\mathrm{time}]^{-1}.
-\end{align*}
+\end{align}
 
-A typical number $\mathcal{L}$ during Run 2 is $\mathcal{L} \sim 2\times 10^{34}$ cm$^{-2}$ s$^{-1}$. for The total number of events we will count for a given process in a given period of time is of course given by 
+A typical number $\mathcal{L}$ during the LHC Run 2 is $\mathcal{L} \sim 2\times 10^{34}$ cm$^{-2}$ s$^{-1}$. The total number of events we will count for a given process in a given period of time is of course given by 
 
 \begin{align}
 N = \int_{\Delta T} \frac{dN}{dt} dt = \int_{\Delta T} \sigma \times \mathcal{L} dt &= \sigma \int_{\Delta T} \mathcal{L} dt = \sigma \Lint, \\ 
@@ -263,10 +269,10 @@ N = \int_{\Delta T} \frac{dN}{dt} dt = \int_{\Delta T} \sigma \times \mathcal{L}
 
 The data collected by a given experiment over a period of time are typically expressed with the corresponding \textit{integrated luminosity} $\Lint$. Let's make an example. The ATLAS experiment has collected a number of proton-proton collisions corresponding to $\Lint = 139\ \ifb$ during the so-called Run 2 at $\sqrt{s} = 13\ \TeV$. The production cross-section for top pairs is predicted to be $\sigma_{t\bar{t}} = 831\ \mathrm{pb}$. Let's compute how many top pair production events we expect to have collected during the full Run 2: 
 
-\begin{align*}
+\begin{align}
 N_{t\bar{t}} = \sigma_{t\bar{t}} \times \Lint &= 831 \times 10^{-12} \ \mathrm{barns} \times 139 \times \left(10^{-15}\ \mathrm{barns}\right)^{-1} \\
 N_{t\bar{t}} &= 1.16\times 10^{8}
-\end{align*}
+\end{align}
 
 So, we expect something like 116 million top pairs to have been produced during Run 2 in ATLAS. 
 
@@ -279,8 +285,6 @@ So, we expect something like 116 million top pairs to have been produced during 
 
 Now, let's take a close look at Figure~\ref{fig:SM_summary}. It shows the cross-sections for several SM processes at the LHC, for different proton-proton centre-of-mass energies. The proton-proton inelastic cross-section at $\sqrt{s} = 13\ \TeV$ is about $80$ mb. Let's consider one random process as an example, say $WW$ production. The plot tells us that the production cross section is between 100 and 200 pb - let's take 160 pb. So, from the ratio of these numbers, we learn that only one in 500,000 proton-proton collisions will produce $WW$. 
 
-\begin{mybox}
-\begin{ExerciseList}
-\Exercise From Figure~\ref{fig:SM_summary}, the Higgs boson production cross-section is $\sigma = 80$ pb. Compute how many Higgs bosons LHC has produced during Run 2, and using the typical value for $\mathcal{L}$ given above, compute how many Higgs bosons per minute the LHC is producing when running at that luminosity. 
-\end{ExerciseList}
-\end{mybox}
+\begin{exercise}
+From Figure~\ref{fig:SM_summary}, the Higgs boson production cross-section is $\sigma = 80$ pb. Compute how many Higgs bosons LHC has produced during Run 2, and using the typical value for $\mathcal{L}$ given above, compute how many Higgs bosons per minute the LHC is producing when running at that luminosity. 
+\end{exercise}
