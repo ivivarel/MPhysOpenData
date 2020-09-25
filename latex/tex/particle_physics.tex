@@ -20,8 +20,8 @@ Particles are objects with a mass of the order of that of the proton. There are 
 \begin{figure}[tb] 
 	\centering
 	\includegraphics[width=0.5\columnwidth]{Figures/Standard_Model_of_Elementary_Particles.png}
-	\label{tab:SM}
-	\caption{Particle content of the Standard Model of Particle Physics. For each particle, the mass, the charge and the spin are reported. Please bear in mind that the mass of light quarks ($u$, $d$, $s$) is not straightforward to define and estimate, given that no free quark can be observed. Taken from Ref.~\cite{SM_wikipedia}}
+	\caption{Particle content of the Standard Model of Particle Physics. For each particle, the mass, the charge and the spin are reported. Please bear in mind that the mass of light quarks ($u$, $d$, $s$) is not straightforward to define and estimate, given that no free quark can be observed. Taken from Ref.~\cite{SM_wikipedia}.}
+		\label{tab:SM}	
 \end{figure}
 
 
@@ -45,7 +45,7 @@ There are important rules that have to be respected when drawing possible Feynma
 \item Electric charge, momentum, energy and angular momentum are always conserved at a vertex.
 \item Fermions are represented with arrows. An incoming (in a vertex) fermion is represented with an incoming arrow, while an outgoing fermion is represented with an outgoing arrow. For anti-fermions, rules are reversed: an incoming anti-fermion is represented with an outgoing arrow, while an outgoing anti-fermion is represented with an incoming arrow. See examples in Figure~\ref{fig:feyn_example}. 
 \item The total number of leptons has to be conserved. Each lepton contributes to the number of leptons with an additive $+1$, while each anti-lepton with an additive $-1$.
-\item Likewise, the total number of quarks has to be conserved. Each quark contributes with an additive $+\frac{1}{3}$, while each anti-quark with an additive $-\frac{1}{3}$
+\item Likewise, the total number of quarks has to be conserved. Each quark contributes with an additive $+\frac{1}{3}$, while each anti-quark with an additive $-\frac{1}{3}$.
 \item As a consequence of rule 1 for angular momentum, a three-line vertex can only be: two fermions and a boson; three bosons.
 \item Gluons interact only with quarks and other gluons. 
 \item The $Z$ and $\gamma$ bosons always conserve the flavour. So, $Ze^+e^-$, $Zu\bar{u}$, $\gamma c\bar{c}$ are perfectly legal vertices, $Z e^+ \mu^{-}$, $Zc\bar{s}$ and $\gamma e^-\mu^+$ are not.
@@ -103,7 +103,7 @@ Figure~\ref{fig:feyn_example}~\footnote{In this handbook, we will always deal wi
 \includegraphics[width=0.2\textwidth]{./Figures/uu_to_Hgamgam.eps}
 }
 \end{center}
-\caption{Examples of processes which are not allowed in the Standard Model, with a quick explanation of why they are not allowed.}
+\caption{Examples of processes which are {\color{red} NOT} allowed in the Standard Model, with a quick explanation of why they are not allowed.}
 \label{fig:forbidden_feyn}
 \end{figure}
 
@@ -120,7 +120,7 @@ In particle physics it is customary to choose a system of units in which the val
 Likewise, from $\Delta E \Delta t \sim \hbar = 1$, it follows that time has the same units of space. From $E=mc^2$, it follows that mass and energy have the same units. 
 
 
-The particle free motion is described in terms of their energy $E$ and momentum $\mathbf{p}$. The three momentum components and the energy form a so-called 4-vector, with the same transformation properties of another 4-vector that you are familiar with: that formed by the three cartesian coordinates and the time. Let's refresh the main properties of the 4-vector $(\mathbf{x},t)$ (note we are using units where $c = 1$, otherwise this vector would mix quantities with different dimensions). For a change of reference frame from a frame $S$ to one $S'$ moving with speed $v$ along $\hat{x}$ with respect to $S$, the 4-vector transforms into $(\mathbf{x'},t')$ such that:
+The particle free motion is described in terms of their energy $E$ and momentum $\mathbf{p}$. The three momentum components and the energy form a so-called 4-vector. You already have the knowledge of what a 4-vector is, but probably nobody has used this name just yet. Let's start from a standard position vector in space $\mathbf{x}$, with components $(x,y,z)$ in a given reference frame $S$. Let's name this a 3-vector (and you can probably already guess where I am going...). You know well that in special relatively the spacial coordinates and the time of a given event cannot be treated independently from each other, simply because they mix if one describes the same event from a different reference frame in uniform motion with respect to the original one.  For a change of reference frame from a frame $S$ to one $S'$ moving with speed $v$ along $\hat{x}$ with respect to $S$, the 4-vector transforms into $(\mathbf{x'},t')$ such that:
 
 \begin{align}
 x' &= \gamma \left(x + \beta t\right) \nonumber \\
@@ -130,13 +130,15 @@ t' &= \gamma \left(t + \beta x\right)
 \end{align}
 \label{eq:lorentz_transform}
 
+\noindent where we are using units in which the speed of light $c$ is equal to 1. $x'$ is a function of both $x$ and $t$, and the same is true for $t'$.  Perfect! Let's then define a 4-vector as $x_\mu = (x,y,z,t)$. The components of a 4-vector transform by Lorentz boost as in Eq.~\ref{eq:lorentz_transform}.
+
 The symbols $\gamma$ and $\beta$ are defined (for $c=1$) by: 
 
 \begin{align}
 \gamma = \frac{1}{\sqrt{1-v^2}} \qquad \beta = \frac{v}{c} = v
 \end{align}
 
-These transformations are such that the product 
+The transformations in Eq.~\ref{eq:lorentz_transform} are such that the product  
 
 \begin{align}
 s = t^2 - \mathbf{x} \cdot \mathbf{x}
@@ -145,9 +147,20 @@ s = t^2 - \mathbf{x} \cdot \mathbf{x}
 \noindent is invariant for Lorentz transformations, that is, its value is the same in the reference frame $S$ or in any other boosted frame $S'$. 
 
 \begin{exercise}
-Prove it! Prove that  $t^2 - \mathbf{x} \cdot \mathbf{x} =  t'^2 - \mathbf{x'} \cdot \mathbf{x'}$, where the primed quantities are connected to the non-primed ones by a Lorenz transformation line in eq.~\ref{eq:lorentz_transform}
+Prove it! Prove that  $t^2 - \mathbf{x} \cdot \mathbf{x} =  t'^2 - \mathbf{x'} \cdot \mathbf{x'}$, where the primed quantities are connected to the non-primed ones by a Lorentz transformation like in eq.~\ref{eq:lorentz_transform}
 \end{exercise}
 
+So, momentum and energy form another 4-vector, $p_{\mu} = (p_x,p_y,p_z,E)$. That means that if I go from one reference frame to another in relative motion along $\hat{x}$,
+
+\begin{align}
+p_x' &= \gamma \left(p_x + \beta E\right) \nonumber \\
+p_y' &= p_y \nonumber \\
+p_z' &= p_z \nonumber\\
+E' &= \gamma \left(E + \beta p_x\right)
+\end{align}
+\label{eq:lorentz_transform_momentum}
+
+It also means that $E^2 - \mathbf{p}\cdot \mathbf{p}$ is an invariant.......
 
 \subsection{Invariant Mass}
 \label{sec:invariant_mass}
@@ -193,7 +206,7 @@ The magnitude of the 4-vector corresponding to the sum of the two proton 4-vecto
 \end{align*}
 
 \begin{exercise}
-Proove that this implies $\hat{s} = \sqrt{x_1 x_2} \sqrt{s}$
+Prove that this implies $\sqrt{\hat{s}} = \sqrt{x_1 x_2} \sqrt{s}$
 \end{exercise}
 
 By the way: the frame in which the proton-proton collision happens at rest (the laboratory frame) does not coincide with that in which the parton collision happens at rest. With respect to the laboratory frame, the parton-parton collision happens in a system which is boosted along the beam axis by $p_{\mathrm{boost}} = |x_1-x_2| \ebeam$.
@@ -222,7 +235,7 @@ The mass of the $W$ boson is $m = 80\ \GeV$. In a given collision, the $W$ boson
 \end{exercise}
 
 
-So, in practice what happens is that in each event, the LHC experiments look at a collision happening with an unknown boost along the $\hat{z}$ axis. There is one important implication: if we measure any variable which is not Lorentz-invariant, we would make a big confusion when measuring it in many events, because we would mix up values belonging to different reference frames! This implies we have to carefully choose the quantities that we measure at a hadron collider like the LHC to characterise the particles' final states: we should avoid using any variable relying on \textit{longitudinal} quantities, that is, quantities relying on variables measured along the $\hat{z}$ axis. Therefore, the variables we use at a hadron collider are (see also Figure~\ref{fig:collider_variables}) 
+So, in practice what happens is that in each event, the LHC experiments look at a collision happening with an unknown boost along the $\hat{z}$ axis. There is one important implication: if we measure any variable which is not Lorentz-invariant, we would make a big confusion when measuring it in many events, because we would mix up values belonging to different reference frames! This implies we have to carefully choose the quantities that we measure at a hadron collider like the LHC to characterise the particles' final states: we should avoid using any variable relying on \textit{longitudinal} quantities, that is, quantities relying on variables measured along the $\hat{z}$ axis. The reason  Therefore, the variables we use at a hadron collider are (see also Figure~\ref{fig:collider_variables}) 
 
 \begin{itemize}
 \item The momentum in a plane transverse to the beam, $\pt$.
@@ -277,14 +290,15 @@ N_{t\bar{t}} &= 1.16\times 10^{8}
 So, we expect something like 116 million top pairs to have been produced during Run 2 in ATLAS. 
 
 \begin{figure}[tb] 
-	\centering
+	\begin{center}
 	\includegraphics[width=0.7\columnwidth]{Figures/SM_summary.png}
-	\label{fig:SM_summary}
-	\caption{Predictions and ATLAS measurements for the production cross sections of several Standard Model processes. Taken from Ref.~\cite{SM_summary}}
+	\end{center}
+	\caption{Predictions and ATLAS measurements for the production cross sections of several Standard Model processes. Taken from Ref.~\cite{SM_summary}.}
+	\label{fig:SM_summary_plot}
 \end{figure}
 
-Now, let's take a close look at Figure~\ref{fig:SM_summary}. It shows the cross-sections for several SM processes at the LHC, for different proton-proton centre-of-mass energies. The proton-proton inelastic cross-section at $\sqrt{s} = 13\ \TeV$ is about $80$ mb. Let's consider one random process as an example, say $WW$ production. The plot tells us that the production cross section is between 100 and 200 pb - let's take 160 pb. So, from the ratio of these numbers, we learn that only one in 500,000 proton-proton collisions will produce $WW$. 
+Now, let's take a close look at Figure~\ref{fig:SM_summary_plot}. It shows the cross-sections for several SM processes at the LHC, for different proton-proton centre-of-mass energies. The proton-proton inelastic cross-section at $\sqrt{s} = 13\ \TeV$ is about $80$ mb. Let's consider one random process as an example, say $WW$ production. The plot tells us that the production cross section is between 100 and 200 pb - let's take 160 pb. So, from the ratio of these numbers, we learn that only one in 500,000 proton-proton collisions will produce $WW$. 
 
 \begin{exercise}
-From Figure~\ref{fig:SM_summary}, the Higgs boson production cross-section is $\sigma = 80$ pb. Compute how many Higgs bosons LHC has produced during Run 2, and using the typical value for $\mathcal{L}$ given above, compute how many Higgs bosons per minute the LHC is producing when running at that luminosity. 
+From Figure~\ref{fig:SM_summary_plot}, the Higgs boson production cross-section is $\sigma = 80$ pb. Compute how many Higgs bosons LHC has produced during Run 2, and using the typical value for $\mathcal{L}$ given above, compute how many Higgs bosons per minute the LHC is producing when running at that luminosity. 
 \end{exercise}
