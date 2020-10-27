@@ -7,20 +7,37 @@ In this experiment we will dig deeper into the $H\rightarrow ZZ$ analysis that w
 \begin{enumerate} 
 \item Edit the file to print the histogram integrals of the different processes: $ZZ\rightarrow 4\ell$ (red histogram), $Z$ and $\ttbar$ production (shown together in purple), $H\rightarrow ZZ$ (cyan), and, finally, the data. From the discussion about MC weights in Section~\ref{sec:review_notebook}, it should be clear that the integral of the histograms and the actual number of events are different for MC (because of all the applied weights), while they will coincide for the data. 
 \item Validate these printouts: try to have a rough estimate of those integrals by looking at the output histogram of the code. Make sure that the rough estimate and the exact printouts are in the same ballpark.
-\item Compute the total expected background $B$ by summing the integrals of the $ZZ$, $Z$ and $\ttbar$ processes. We will now compute its agreement with the observed data yield $O$: 
+\item Compute the total expected background $B$ by summing the integrals of the $ZZ$, $Z$ and $\ttbar$ processes. 
+\begin{remark} 
+It is important at this point to clarify a couple of things.
+\begin{itemize}
+\item The histogram displays the number of events in a bin with width 5\ \GeV. The units displayed on the $y$-axis are ``Events/5\ \GeV''. Therefore, the area of a rectangle representing, for example, a yield of 20 Events/5\ \GeV\ is: 
+\begin{equation} 
+A = 20\ \mathrm{Events/5\ \GeV} \times 5\ \GeV = 20\ \mathrm{Events}.
+\end{equation} 
+Therefore, the integral corresponds simply to the sum of the entries of all histogram bins. 
+\item Depending on where you print the yields in the code, you may notice that the entries of the red histogram would correspond to the sum of the $ZZ$, $Z$ and $\ttbar$ processes. This is essentially a graphical trick: to prepare the stack histogram, and display the $ZZ$ contribution correctly, a histogram corresponding to the sum of the three processes is prepared and plot, and then a second histogram, corresponding to the sum of $Z$ and $\ttbar$ is overlaid. The result is that the ``uncovered'' bit of the red histograms correctly displays the $ZZ$ contribution only. The bottom line is that the yields that you obtain from the code should be validated against the plot. Do they match?    
+\end{itemize}
+\end{remark} 
+
+\item Now compute the background and the observation only in the invariant mass range $120\ \GeV < m_{4\ell} < 130\ \GeV$. We will now compute its agreement with the observed data yield $O$: 
 \end{enumerate}
 
 \begin{exercise}
 \begin{itemize} 
-\item The total background $B$ represents the number of events that one \textit{expects}. Suppose I expect 100 events: the outcome of the actual experiment in general will not be exactly 100. \textit{Assuming that the background expectation is correct}, the probability of a given outcome will be described by a Poisson probability function. 
-\item Please review the properties of a Poisson probability function. What is the RMS of a Poisson distribution of mean value $\mu$?
-\item Evaluate the level of compatibility of your data yield $O$ by computing the probability $p(O \ge B)$ (if $O<B$, define $p = 0.5$). Such probability is known as a $p$-value. What is the p-value? Small values of the $p$-value indicate low level of compatibility of the hypothesis tested (in this case that the observed yield comes from an expected background level $B$). 
+\item The total background $B$ represents the number of events that one \textit{expects}. Suppose I expect 100 events: the outcome of the actual experiment in general will not be exactly 100. \textit{Assuming that the background expectation is correct}, the probability of a given outcome will be described by a Poisson probability function. The probability of obtaining $x$ counts in an experiment where $B$ are expected is:
+
+\begin{equation}
+P(x;B) = \frac{B^{x}}{x!} e^{-B}.
+\end{equation}
+\item Please review the properties of a Poisson probability function, $P(x;\mu)$. What is the RMS of a Poisson distribution of mean value $\mu$?
+\item Evaluate the level of compatibility of your data yield $O$ by computing the probability to have observed a result equal or worse (that is, further away from the expectation) $p(x \ge O) = \sum_{x = O}^{\infty} \frac{B^{x}}{x!} e^{-B}$. Such probability is known as a $p$-value. What is the p-value? Small values of the $p$-value indicate low level of compatibility of the hypothesis tested (in this case that the observed yield comes from an expected background level $B$). 
 \item Physicists like to convert $p$-values. This conversion can be done for example using \href{https://planetcalc.com/7803/}{this web site}. A high $z$ score, or significance, corresponds to a low level  compatibility of the hypothesis tested (in this case that the observed yield comes from an expected background level $B$). What is the significance in this case?
 \end{itemize}
 \end{exercise}
 
 \begin{enumerate}[resume]
-\item Repeat the points above, but this time compute the background and the observation only in the invariant mass range $120\ \GeV < m_{4\ell} < 130\ \GeV$. What are the p-values and the significance now? 
+
 \item Assume that the difference between the background and observation in the range  $120\ \GeV < m_{4\ell} < 130\ \GeV$ is now a yield due to $H \rightarrow 4\ell$. Knowing that the fraction of Higgs boson production that you select with this analysis is $\epsilon = 2 \times 10^{-5}$ (coming from $BR(H\rightarrow ZZ)=2.6\times 10^{-2}$, $BR(Z\rightarrow \ell\ell) \sim 6\%$, where $\ell = e, \mu$, plus some inefficiency in reconstructing leptons), what is your estimate for the production cross-section of the Higgs boson? Do your best to associate an error to it coming from the number of observed events, and compare to the standard model best prediction of $\sigma(H) = 55$ pb at $\sqrt{s} = 13\ \TeV$, with an uncertainty of 5\%. 
 \item Assuming your estimate for the signal and background, how much integrated luminosity would you need to declare a $5\sigma$ discovery?
 \end{enumerate}
