@@ -4,3 +4,7 @@
 *.aux
 *.gz
 *.thm
+*converted*
+*idx*
+main.pdf
+*.DS_Store*

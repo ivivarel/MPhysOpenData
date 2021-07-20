@@ -44,7 +44,7 @@ P(x;B) = \frac{B^{x}}{x!} e^{-B}.
 
 \section{Experiment 2: Plot the di-electron and di-muon invariant mass in data}
 
-In this experiment we will try to use data only to plot the di-lepton invariant mass in events with two leptons, and we will se what the meaning of the cuts on isolation on lines 27 and 31 of \verb|HZZCuts.py| actually do. Finally, we will try to understand the mass resolution for the measurement of $Z\rightarrow e^+e^-$ and $Z\rightarrow \mu^+\mu^-$. We will start from a copy of \verb|HZZAnalysis.py| and associated modules and heavily modify them. To start with, copy \verb|HZZAnalysis.py|, \verb|HZZCuts.py|, \verb|HZZHistograms.py|, \verb|HZZSamples.py|, into new files \verb|ZeeAnalysis.py|, \verb|ZeeCuts.py|, etc. 
+In this experiment we will try to use data only to plot the di-lepton invariant mass in events with two leptons. Finally, we will try to understand the mass resolution for the measurement of $Z\rightarrow e^+e^-$ and $Z\rightarrow \mu^+\mu^-$. We will start from a copy of \verb|HZZAnalysis.py| and associated modules and heavily modify them. To start with, copy \verb|HZZAnalysis.py|, \verb|HZZCuts.py|, \verb|HZZHistograms.py|, \verb|HZZSamples.py|, into new files \verb|ZeeAnalysis.py|, \verb|ZeeCuts.py|, etc. 
 
 \begin{remark}
 \textbf{TIP:} When modifying and playing with the code, reduce \verb|fraction| to something like 0.1 or even lower, to speed up the code while debugging.
@@ -62,22 +62,12 @@ In this experiment we will try to use data only to plot the di-lepton invariant 
 \end{enumerate}
 
 \begin{remark}
-The histogram should display a peak at about 90 GeV, with a lot of events at different masses. The peak at 90 GeV is clearly due to $Z\rightarrow e^+ e^-$, but.... what are all other events?
-\end{remark}
+The histogram should display a peak at about 90 GeV, with a lot of events at different masses. What boson has a mass of about 90 GeV and decays into an electron-positron pair (among other things)? \end{remark}
+
 
 \begin{enumerate} [resume]
-\item  Try to add cuts that select on the lepton isolation variables, looking at the examples in  \verb|HZZCuts.py|. What you want is to reject events where either the first or the second leading lepton is not isolated. 
-\item Plot again the invariant mass. Comment on differences that you see, especially at small values of $m_{ee}$. 
-\end{enumerate}
-
-\begin{remark}
-There are two main categories of leptons that the detector sees: genuine leptons and fake leptons. Genuine leptons are those where reconstruction correctly identifies a lepton as such. Fake leptons are those where the reconstruction thinks there is a lepton, but in fact there wasn't. 
-
-Genuine leptons, in turn, are divided into two categories: prompt leptons arise from an on shell $W$ or $Z$ going to leptons (like in $pp\rightarrow Z\rightarrow e^+ e^-$, or $\ttbar \rightarrow WWbb \rightarrow \mu \nu_{\mu} jjbb$). These leptons are \textit{isolated}, that is, normally do not have other particles nearby. Non-prompt leptons are emitted in hadrons decay, like $B_0\rightarrow e^-\nu K^+$, and they tend to be non-isolated. Isolation is a powerful variable to reject fake and non-prompt leptons.   
-\end{remark}
-
-\begin{enumerate} [resume]
-\item Fit the $Z$ peak in data with a gaussian. Now repeat the analysis selecting muons instead of electrons, and fit the $Z\rightarrow \mu\mu$ peak with a gaussian. Compare the widths of the two gaussians. Which one is larger? Can you try to guess why?  
+\item Try to fit the $Z$ peak between 85 and 95 GeV in data with a gaussian. Record the parameters of the fit and discuss the quality of the fit. If the quality of the fit is not great, try to provide an explanation for it. Is there an alternative fit that could work better? Do you want to try that out? 
+\item  Now repeat the analysis selecting muons instead of electrons, and fit the $Z\rightarrow \mu\mu$ peak with a gaussian (same range). Compare the widths of the two gaussians. Which one is larger? Can you try to guess why?  
 \end{enumerate}
 
 \subsection{Experiment 3: Understanding the events outside the mass window}
