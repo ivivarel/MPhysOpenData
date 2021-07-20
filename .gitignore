@@ -1,7 +1,10 @@
-*.bbl
-*.bcf
-*.blg
-*.toc
-*.out
-*.xml
+*.log
 *~
+*.pl
+*.aux
+*.gz
+*.thm
+*converted*
+*idx*
+main.pdf
+*.DS_Store*
